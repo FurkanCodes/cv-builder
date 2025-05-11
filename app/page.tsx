@@ -9,9 +9,11 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-grow">
+    <div className="flex min-h-screen flex-col items-center">
+      <div className="w-full">
+        <Header />
+      </div>
+      <main className="flex-grow w-full max-w-[1400px] mx-auto">
         <Hero />
         <Features />
         <Benefits />
@@ -19,7 +21,9 @@ export default function Home() {
         <Pricing />
         <CallToAction />
       </main>
-      <Footer />
+      <div className="w-full">
+        <Footer />
+      </div>
     </div>
   );
 }

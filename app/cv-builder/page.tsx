@@ -1,13 +1,9 @@
-import CVBuilderHeader from "@/components/cv-builder/CVBuilderHeader";
-import CVBuilderCore from "@/components/cv-builder/CVBuilderCore";
+import BuilderLayout from "@/components/cv-builder/CVBuilderPage";
 
-export default function CVBuilderPage() {
+export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <CVBuilderHeader />
-      <main className="flex-1 container mx-auto px-4 py-8">
-        <CVBuilderCore />
-      </main>
-    </div>
+    <>
+      <BuilderLayout />
+    </>
   );
 }

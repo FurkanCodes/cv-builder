@@ -3,12 +3,13 @@ import { jsPDF } from "jspdf";
 
 export async function generatePDF(element: HTMLElement, filename: string) {
   try {
+    await document.fonts.ready;
     const imgData = await toPng(element, {
       quality: 2,
       pixelRatio: 2,
       cacheBust: true,
     });
-
+    console.log("imgData", imgData);
     // Calculate the PDF dimensions to maintain aspect ratio
     const imgWidth = 210; // A4 width in mm
     const pageHeight = 297; // A4 height in mm
