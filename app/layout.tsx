@@ -1,10 +1,23 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotest = Space_Grotesk({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "CV Builder - Create Professional Resumes Easily",
@@ -19,7 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className + "relative min-h-screen"}>
+      <body
+        className={`${geistSans.variable} ${geistSans.variable} antialiased h-full font-[family-name:var(--font-geist-sans)]`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
